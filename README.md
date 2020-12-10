@@ -1,2 +1,5 @@
 # ShapedTabBar
-Implemented a shaped and item-centered tab bar
+Implemented a shaped and item-centered tab bar for styling.
+
+![Screenshot](shapedtabbar.gif)
+
