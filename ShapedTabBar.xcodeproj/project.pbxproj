@@ -72,20 +72,52 @@
 			children = (
 				AA1F598F258275B8003B3096 /* AppDelegate.swift */,
 				AA1F5991258275B8003B3096 /* SceneDelegate.swift */,
-				AA1F5995258275B8003B3096 /* Main.storyboard */,
-				AA1F59A325827614003B3096 /* TabBarController.swift */,
-				AA1F59A52582764A003B3096 /* ShapeTabBar.swift */,
-				AA1F5993258275B8003B3096 /* HomeViewController.swift */,
-				AA1F59A7258287BE003B3096 /* Home.storyboard */,
-				AA1F59AD25828A7F003B3096 /* ComposeViewController.swift */,
-				AA1F59AF25828A88003B3096 /* Compose.storyboard */,
-				AA1F59AB258289E7003B3096 /* ProfileViewController.swift */,
-				AA1F59A9258289C2003B3096 /* Profile.storyboard */,
+				AA1F59B12586F2DE003B3096 /* Tab */,
+				AA1F59B22586F2E8003B3096 /* Home */,
+				AA1F59B32586F2F3003B3096 /* Compose */,
+				AA1F59B42586F2FF003B3096 /* Profile */,
 				AA1F5998258275BC003B3096 /* Assets.xcassets */,
 				AA1F599A258275BC003B3096 /* LaunchScreen.storyboard */,
 				AA1F599D258275BC003B3096 /* Info.plist */,
 			);
 			path = ShapedTabBar;
+			sourceTree = "<group>";
+		};
+		AA1F59B12586F2DE003B3096 /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F5995258275B8003B3096 /* Main.storyboard */,
+				AA1F59A325827614003B3096 /* TabBarController.swift */,
+				AA1F59A52582764A003B3096 /* ShapeTabBar.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		AA1F59B22586F2E8003B3096 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F5993258275B8003B3096 /* HomeViewController.swift */,
+				AA1F59A7258287BE003B3096 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		AA1F59B32586F2F3003B3096 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F59AD25828A7F003B3096 /* ComposeViewController.swift */,
+				AA1F59AF25828A88003B3096 /* Compose.storyboard */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		AA1F59B42586F2FF003B3096 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				AA1F59AB258289E7003B3096 /* ProfileViewController.swift */,
+				AA1F59A9258289C2003B3096 /* Profile.storyboard */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
