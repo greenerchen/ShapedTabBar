@@ -33,7 +33,7 @@ class TabBarController: UITabBarController {
                                              tag: Tab.home.rawValue)
             case Tab.compose.rawValue:
                 vc.tabBarItem = UITabBarItem(title: nil,
-                                             image: UIImage(systemName: "plus.circle.fill", withConfiguration: UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 44)))?.withAlignmentRectInsets(UIEdgeInsets(top: -10, left: 0, bottom: 10, right: 0)),
+                                             image: UIImage(systemName: "plus.circle.fill", withConfiguration: UIImage.SymbolConfiguration(font: UIFont.systemFont(ofSize: 44)))?.withAlignmentRectInsets(UIEdgeInsets(top: -7, left: 0, bottom: 10, right: 0)),
                                              tag: Tab.compose.rawValue)
             case Tab.profile.rawValue:
                 vc.tabBarItem = UITabBarItem(title: nil,
