@@ -35,23 +35,37 @@ class ShapeTabBar: UITabBar {
     override func layoutSubviews() {
         super.layoutSubviews()
         layer.mask = makeShapeLayer()
+        layer.addSublayer(makeBorderLayer())
     }
     
-    private func makeShapeLayer() -> CALayer {
+    private func makeShapeLayer() -> CAShapeLayer {
         let layer = CAShapeLayer()
         layer.path = makeCloudPath()
         return layer
     }
     
-    private func makeOvalPath() -> CGPath {
-        return UIBezierPath(roundedRect: CGRect(x: (UIScreen.main.bounds.size.width - visibleWidth) / 2.0, y: topMargin, width: visibleWidth, height: visibleHeight), cornerRadius: 20.0).cgPath
+    private func makeBorderLayer() -> CAShapeLayer {
+        let layer: CAShapeLayer = makeShapeLayer()
+        layer.fillColor = UIColor.clear.cgColor
+        layer.strokeColor = UIColor.gray.cgColor
+        layer.lineWidth = 1
+        return layer
+    }
+    
+    private func makeShadowLayer() -> CAShapeLayer {
+        let layer: CAShapeLayer = makeShapeLayer()
+        layer.fillColor = UIColor.clear.cgColor
+        layer.shadowColor = UIColor.gray.cgColor
+        layer.shadowOpacity = 1
+        layer.shadowOffset = CGSize(width: 6, height: 8)
+        return layer
     }
     
     private func makeCloudPath() -> CGPath {
         let path = UIBezierPath()
         path.move(to: CGPoint(x: (UIScreen.main.bounds.size.width - visibleWidth) / 2.0, y: topMargin + 28 + 20))
         path.addArc(withCenter: CGPoint(x: (UIScreen.main.bounds.size.width - visibleWidth) / 2.0 + 20, y: topMargin + 28 + 20), radius: 20, startAngle: CGFloat(Double.pi ), endAngle: CGFloat(Double.pi * 1.5), clockwise: true)
-        path.addLine(to: CGPoint(x: (UIScreen.main.bounds.size.width - visibleWidth) / 2.0 + itemWidth, y: topMargin + 28))
+        path.addLine(to: CGPoint(x: (UIScreen.main.bounds.size.width - visibleWidth) / 2.0 + itemWidth - 20, y: topMargin + 28))
         path.addArc(withCenter: CGPoint(x: UIScreen.main.bounds.size.width / 2.0, y: topMargin + 28 + 28), radius: 56, startAngle: CGFloat(Double.pi * (2 - 0.837)), endAngle: CGFloat(Double.pi * 1.837), clockwise: true)
         path.addLine(to: CGPoint(x: (UIScreen.main.bounds.size.width - visibleWidth) / 2.0 + visibleWidth - 20, y: topMargin + 28))
         path.addArc(withCenter: CGPoint(x: (UIScreen.main.bounds.size.width - visibleWidth) / 2.0 + visibleWidth - 20, y: topMargin + 28 + 20), radius: 20, startAngle: CGFloat(Double.pi * 1.5), endAngle: CGFloat(Double.pi * 2), clockwise: true)
